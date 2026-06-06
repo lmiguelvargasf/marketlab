@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { HeaderAccount } from "@/components/marketlab/header-account";
 import { ThemeToggle } from "@/components/marketlab/theme-toggle";
 
 export function Header() {
@@ -23,9 +24,7 @@ export function Header() {
           </nav>
         </div>
         <div className="flex items-center gap-2">
-          <span className="sr-only" data-slot="auth-placeholder">
-            Account
-          </span>
+          <HeaderAccount />
           <ThemeToggle />
         </div>
       </div>
