@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { MarketBuyPlaceholder } from "@/components/marketlab/market-buy-placeholder";
+import { MarketBuySection } from "@/components/marketlab/market-buy-section";
 import { MarketDetailInfo } from "@/components/marketlab/market-detail-info";
 import { ProbabilityChart } from "@/components/marketlab/probability-chart";
 import { Button } from "@/components/ui/button";
@@ -59,7 +59,7 @@ export default async function MarketDetailPage({
           isFlatFallback={chart.isFlatFallback}
           currentYesChance={chart.currentYesChance}
         />
-        <MarketBuyPlaceholder market={market} />
+        <MarketBuySection market={market} />
       </div>
     </main>
   );
