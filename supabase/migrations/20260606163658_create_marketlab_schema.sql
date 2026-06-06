@@ -127,6 +127,15 @@ create policy ledger_entries_select_own
   using (auth.uid() = user_id);
 
 -- ---------------------------------------------------------------------------
+-- Data API role grants (RLS controls rows; GRANT controls table access)
+-- ---------------------------------------------------------------------------
+
+grant select on table public.markets to anon, authenticated;
+grant select on table public.profiles to authenticated;
+grant select on table public.positions to authenticated;
+grant select on table public.ledger_entries to authenticated;
+
+-- ---------------------------------------------------------------------------
 -- Profile creation on auth signup
 -- ---------------------------------------------------------------------------
 
